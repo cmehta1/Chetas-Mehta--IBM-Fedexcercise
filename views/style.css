@@ -19,7 +19,7 @@ body{
 .flip3D > .back{
     position:absolute;
     transform: perspective( 600px ) rotateY( 180deg );
-    background:white; width:320px; height:320px; border-radius: 7px; color: white;
+    background:white; width:300px; height:300px; border-radius: 7px; color: white;
     backface-visibility: hidden;
     transition: transform .5s linear 0s;
     text-align: center;

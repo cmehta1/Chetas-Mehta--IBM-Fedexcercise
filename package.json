@@ -1,0 +1,19 @@
+{
+  "name": "ibm-flickr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Chetas Mehta",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.4.12",
+    "angular-animate": "^1.5.8",
+    "angular-cookies": "^1.5.8",
+    "angular-resource": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
+    "angular-touch": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.0"
+  }
+}

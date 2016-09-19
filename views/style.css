@@ -1,0 +1,38 @@
+body{
+    background: rgba(179,220,237,1);
+}
+
+.textflickr{
+    color: black;
+    font-family:"Lucida Sans Unicode";
+}
+
+.flip3D{ width:300px; height:300px; margin:50px; float:left; display: inline-block}
+.flip3D > .front{
+    position:absolute;
+    transform: perspective( 600px ) rotateY( 0deg );
+    background:skyblue; width:300px; height:300px; border-radius: 7px;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+}
+
+.flip3D > .back{
+    position:absolute;
+    transform: perspective( 600px ) rotateY( 180deg );
+    background:black; width:320px; height:320px; border-radius: 7px; color: white;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+    text-align: center;
+}
+
+.flip3D:hover > .front{
+    transform: perspective( 600px ) rotateY( -180deg );
+}
+
+.flip3D:hover > .back{
+    transform: perspective( 600px ) rotateY( 0deg );
+}
+
+.cards{
+    padding-top: 35px;
+}

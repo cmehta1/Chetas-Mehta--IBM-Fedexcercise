@@ -1,0 +1,36 @@
+<section class="flickr-container" ng-controller="flickrCrtl">
+	<h2 class="textflickr" style="margin-left: 7%; margin-top: 7%">Flickr Photos from NASA account</h2>
+
+	<div class="flickr-container-row search-sorting-row">
+		<div style="height: 30%">
+
+			<!--Search bar with model find-->
+			<input placeholder="Search by title" autofocus ng-model="find" style="width: 30%; height: 30px; margin-left: 7%">
+		</div>
+
+			<select class="form-control" ng-model="photoOrder" style="width: 15%; margin-left: 7%">
+				<option value="title">Title (A-Z)</option>
+				<option value="-title">Title (Z-A)</option>
+			</select>
+	</div>
+
+		<div class="cards" >
+
+			<!--This loop will pull photos and present it in a card form. In a card form, It will show back and front of the card. -->
+
+			<div ng-repeat="photo in photos | filter: find | orderBy: photoOrder">
+				<div class="flip3D">
+					<div class="back">
+						<h4 class="flickr-container-row-photo-header">{{photo.title}} </h4>
+						<br/>
+						<h5 class="flickr-container-row-photo-header">Hashkaey: {{photo.$$hashKey}} </h5>
+						<h5 class="flickr-container-row-photo-header">owner: {{photo.owner}} </h5>
+						<h5 class="flickr-container-row-photo-header">secret: {{photo.secret}} </h5>
+					</div>
+					<img class ="front" ng-src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg" alt="{{photo.title}}">
+				</div>
+			</div>
+</div>
+
+
+</section>

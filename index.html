@@ -1,1 +1,62 @@
-hello
+<!--Main index page for Flickr application. By opening this project, open this page in a web browser-->
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>Front-End Exercise</title>
+    <meta name="viewport" content="width = device-width">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="views/style.css">
+  </head>
+
+  <!--This is a bootstrapping of this application, scope of scope variable-->
+  <body ng-app="fedexercise">
+
+  <nav class="navbar navbar-dark bg-primary">
+
+    <a class="navbar-brand" style="color: darkturquoise;  font-size: 150%">
+      <!--Flickr LOGO-->
+      <img src='./images/Flickr.png' style="height: 210px; width: 210px; margin-left: 0%" alt="FlickrLOGO" />
+    </a>
+    <ul class="nav navbar-nav" style="float: right" >
+    </ul>
+  </nav>
+
+    <h1 class="textflickr" style="padding-left: 225px">IBM - Front-End Exercise</h1>
+
+    <header class="header">
+      <nav class="navbar header-navbar" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <h2 class="hide">Site Navigation</h2>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <main role="main" class="body-container">
+      <flickr>
+        <!--Flickr Directive -->
+      </flickr>
+    </main>
+
+
+    <!--Scripts to be loaded-->
+    <script src="node_modules/angular/angular.min.js"></script>
+
+    <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="node_modules/angular-cookies/angular-cookies.min.js"></script>
+    <script src="node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="node_modules/angular-touch/angular-touch.min.js"></script>
+
+
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controller/FlickrController.js"></script>
+        <script src="scripts/directives/FlickrDirective.js"></script>
+        <script src="scripts/services/flickrfactory.js"></script>
+
+</body>
+</html>
